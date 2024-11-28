@@ -1,9 +1,11 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import "./stylesheets/index.css";
 import Index from "./pages";
 import Loading from "./components/loading";
 import PopErr from "./components/PopErr";
 import PopSuc from "./components/PopSuc";
+import OrderFilm from "./pages/order_film";
+import Profile from "./pages/profile";
 function App() {
 
   return (
@@ -14,6 +16,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/*" element={<Index />}/>
+        <Route path="/order" element={<OrderFilm />}/>
+        <Route path="/profile/*" element={<Profile />}/>
+        <Route path="*" element={<Navigate to="/" replace />}/>
       </Routes>
     </BrowserRouter>
     </>

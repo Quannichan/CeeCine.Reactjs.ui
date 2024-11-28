@@ -28,7 +28,7 @@ function Login(prop){
                 }else{
                     if(pass.length  === 0 || pass.length < 8 ){
                         alert("Hãy nhập mật khẩu")
-                    }else{
+                    }else{ 
                         $('#authpopup').addClass("hide");
                         $("#login").addClass("hide");
                         $("#img_account_top").removeClass("hide");

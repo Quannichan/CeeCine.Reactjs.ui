@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router";
 import Product from "./product";
 
 function Filmlist(prop){
+    const nav = useNavigate();
+
+    var orderFilm   = function(){
+        nav("/order");
+        window.location.reload()
+    }
+
     return(
         <section className="mt-50">
         <div className="center_ul" id="btn_type_film_list">
@@ -14,6 +22,7 @@ function Filmlist(prop){
                     <Product
                         key={d.id}
                         clickEvent = {()=>{}}
+                        orderFilm={orderFilm}
                         id={d.id}
                         img={d.img}
                         type={d.type}

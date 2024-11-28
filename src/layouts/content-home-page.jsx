@@ -8,6 +8,7 @@ import Promolist from "../components/promotion_list";
 
 function contentProductPage(){
 
+
     const [films, setFilm] = useState([
         {
             id:1,

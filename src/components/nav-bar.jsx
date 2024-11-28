@@ -29,10 +29,10 @@ function navbar(){
 
             <div className="wrap_center_ul">
                 <ul className="center_ul" id="nav-center">
-                    <li className="nav_link nav_header" id="home" onClick={()=>{navigate("/home")}}>Trang chủ</li>
-                    <li className="nav_link nav_header" id="about" onClick={()=>{navigate("/about")}}>Phim</li>
-                    <li className="nav_link nav_header" id="portfolio" onClick={()=>{navigate("/portfolio")}}>Rạp chiếu</li>
-                    <li className="nav_link nav_header" id="events" onClick={()=>{navigate("/events")}}>Khuyến mãi</li>
+                    <li className="nav_link nav_header" id="home" onClick={()=>{navigate("/")}}>Trang chủ</li>
+                    <li className="nav_link nav_header" id="about" onClick={()=>{navigate("")}}>Phim</li>
+                    <li className="nav_link nav_header" id="portfolio" onClick={()=>{navigate("")}}>Rạp chiếu</li>
+                    <li className="nav_link nav_header" id="events" onClick={()=>{navigate("")}}>Khuyến mãi</li>
                 </ul>
             </div>
 
@@ -43,7 +43,7 @@ function navbar(){
                 <button onClick={()=>{
                     $("#authpopup").removeClass("hide");
                 }} className="btn nav_header" id="login"><p>Đăng nhập</p></button>
-                 <img id="img_account_top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4CK8JotmDXKFp9CRdwf5J06VFbgY_BENmnw&s" className="userimg-prod hide" style={{"width" : "35px", "height" : "35px", "marginRight": "5px"}} />
+                 <img onClick={()=>{navigate("/profile/info")}} id="img_account_top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4CK8JotmDXKFp9CRdwf5J06VFbgY_BENmnw&s" className="userimg-prod hide" style={{"width" : "35px", "height" : "35px", "marginRight": "5px"}} />
             </div>
             </div>
             
