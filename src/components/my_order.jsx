@@ -7,11 +7,11 @@ function MyOrder(){
             <div>
                 <FilmOrder/>
                 <FilmOrder/>
-                <FilmOrder/>
+                <FilmOrder/> 
                 <FilmOrder/>
             </div>
 
-            <h1 className="product-name mt-50" style={{"fontSize":"30px"}}>Phim đã xem</h1>
+            <h1 className="product-nam e mt-50" style={{"fontSize":"30px"}}>Phim đã xem</h1>
             <div>
                 <FilmOrder/>
                 <FilmOrder/>

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import $ from "jquery";
 import logo from "../assets/img/logo.png";
-
+import DropDownMenu from "../components/drop-down-menu";
 function navbar(){
 
     const navigate = useNavigate();
@@ -30,7 +30,7 @@ function navbar(){
             <div className="wrap_center_ul">
                 <ul className="center_ul" id="nav-center">
                     <li className="nav_link nav_header" id="home" onClick={()=>{navigate("/")}}>Trang chủ</li>
-                    <li className="nav_link nav_header" id="about" onClick={()=>{navigate("")}}>Phim</li>
+                    <li className="nav_link nav_header" id="about" onClick={()=>{navigate("/filmlist")}}>Phim</li>
                     <li className="nav_link nav_header" id="portfolio" onClick={()=>{navigate("")}}>Rạp chiếu</li>
                     <li className="nav_link nav_header" id="events" onClick={()=>{navigate("")}}>Khuyến mãi</li>
                 </ul>
@@ -43,7 +43,11 @@ function navbar(){
                 <button onClick={()=>{
                     $("#authpopup").removeClass("hide");
                 }} className="btn nav_header" id="login"><p>Đăng nhập</p></button>
-                 <img onClick={()=>{navigate("/profile/info")}} id="img_account_top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4CK8JotmDXKFp9CRdwf5J06VFbgY_BENmnw&s" className="userimg-prod hide" style={{"width" : "35px", "height" : "35px", "marginRight": "5px"}} />
+                <div id="img_account_top" className="wrap_img_account_top hide" style={{"position":"relative"}}>
+                    {/* onClick={()=>{navigate("/profile/info")}} */}
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4CK8JotmDXKFp9CRdwf5J06VFbgY_BENmnw&s" className="userimg-prod" style={{"width" : "35px", "height" : "35px", "marginRight": "5px"}} />
+                        <DropDownMenu/>
+                </div>
             </div>
             </div>
             
